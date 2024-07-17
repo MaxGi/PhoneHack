@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+echo "Starting up audio"
+
+pd -nogui -noadc -audiodev 2 /home/pi/pdTrigg.pd &
+
+sleep 5
+
+echo "Starting reader"
+
+python /home/pi/read_phone.py &
