@@ -11,6 +11,7 @@ s.connect((host, port))
 def send_pd(mess):
     send_mess = str(mess) + " ;"
     s.send(send_mess.encode('utf-8'))
+    print("Sent mess: ", mess)
 
 row = [17, 27, 22, 10]
 collumn = [14, 15, 4]
